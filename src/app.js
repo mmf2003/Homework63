@@ -23,7 +23,7 @@ app.set("views", path.join(projectRoot, "views"));
 app.set("views", path.join(projectRoot, "views"));
 
 // Serve CSS and other static assets.
-app.use(express.static(path.join(projectRoot, "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Global middleware.
 app.use(requestLogger);

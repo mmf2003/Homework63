@@ -1,5 +1,5 @@
 {
-    "name": "homework62",
+    "name": "homework63",
     "version": "1.0.0",
     "description": "Express.js MVC Server with Middleware",
     "main": "server.js",
@@ -7,12 +7,16 @@
     "scripts": {
         "start": "node server.js",
         "dev": "node --watch server.js",
-        "test": "node --test test.js"
+        "test": "node --test"
     },
     "license": "ISC",
     "dependencies": {
+        "bcryptjs": "^3.0.3",
+        "cookie-parser": "^1.4.7",
+        "dotenv": "^18.0.10",
         "ejs": "^7.0.2",
         "express": "^5.1.0",
+        "jsonwebtoken": "^9.0.3",
         "pug": "^3.0.4"
     }
 }
