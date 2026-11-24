@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <h1>Node Dashboard</h1>
+      <nav>
+        <a href="/users">Users</a>
+        <a href="/articles" class="active">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-heading">
+      <h2>Articles</h2>
+      <p>Explore our latest articles and tutorials.</p>
+    </div>
+
+    <div class="articles-grid">
+      <% articles.forEach(article => { %>
+        <article class="article-card">
+          <span class="category-tag">
+            <%= article.category %>
+          </span>
+
+          <h3><%= article.title %></h3>
+
+          <p><%= article.description %></p>
+
+          <div class="article-footer">
+            <span>By <%= article.author %></span>
+
+            <a class="button-link" href="/articles/<%= article.id %>">
+              Read Article
+            </a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </main>
+</body>
+</html>

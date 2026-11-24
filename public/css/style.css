@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    background: #0f172a;
+    color: white;
+}
+
+.header-inner {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 21px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+}
+
+/* PAGE */
+
+main {
+    padding-top: 45px;
+    padding-bottom: 60px;
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.page-heading p {
+    color: #64748b;
+    margin: 0;
+}
+
+/* CARDS */
+
+.card,
+.profile-card,
+.article-card,
+.article-detail {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.card {
+    overflow-x: auto;
+}
+
+.card-heading {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card-heading h3 {
+    margin: 0;
+}
+
+.badge,
+.role-badge,
+.category-tag {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* USERS TABLE */
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 620px;
+}
+
+.users-table th,
+.users-table td {
+    padding: 18px 24px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table th {
+    font-size: 12px;
+    color: #64748b;
+    background: #f8fafc;
+}
+
+.users-table td {
+    font-size: 14px;
+}
+
+.users-table tr:last-child td {
+    border-bottom: none;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 9px 14px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.button-link:hover {
+    background: #1d4ed8;
+}
+
+/* PROFILE */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-card {
+    padding: 36px;
+    max-width: 650px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.profile-card h2 {
+    margin: 20px 0 12px;
+}
+
+.profile-details {
+    margin-top: 30px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row span {
+    color: #64748b;
+}
+
+/* ARTICLES */
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.article-card {
+    padding: 26px;
+}
+
+.article-card h3 {
+    margin: 18px 0 10px;
+    font-size: 20px;
+}
+
+.article-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.article-footer span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.article-detail {
+    padding: 40px;
+    max-width: 850px;
+}
+
+.article-detail h1 {
+    font-size: 34px;
+    margin: 20px 0 10px;
+}
+
+.article-author {
+    color: #64748b;
+}
+
+.article-content {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    line-height: 1.9;
+    color: #475569;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 18px 0;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-footer {
+        flex-wrap: wrap;
+    }
+
+    .profile-card,
+    .article-detail {
+        padding: 24px;
+    }
+
+    .article-detail h1 {
+        font-size: 27px;
+    }
+}

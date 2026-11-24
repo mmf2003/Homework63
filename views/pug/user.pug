@@ -1,0 +1,37 @@
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    header.header
+      .container.header-inner
+        h1 Node Dashboard
+        nav
+          a(href="/users") Users
+          a(href="/articles") Articles
+
+    main.container
+      a.back-link(href="/users") ← Back to Users
+
+      .profile-card
+        .avatar= user.name.charAt(0)
+
+        h2= user.name
+        span.role-badge= user.role
+
+        .profile-details
+          .detail-row
+            span User ID
+            strong= user.id
+
+          .detail-row
+            span Email
+            strong= user.email
+
+          .detail-row
+            span Role
+            strong= user.role

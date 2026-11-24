@@ -1,0 +1,42 @@
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Users Dashboard
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    header.header
+      .container.header-inner
+        h1 Node Dashboard
+        nav
+          a.active(href="/users") Users
+          a(href="/articles") Articles
+
+    main.container
+      .page-heading
+        h2 Users
+        p Manage and explore registered users.
+
+      .card
+        .card-heading
+          h3 All Users
+          span.badge #{users.length} users
+
+        table.users-table
+          thead
+            tr
+              th Name
+              th Email
+              th Role
+              th Action
+          tbody
+            each user in users
+              tr
+                td= user.name
+                td= user.email
+                td
+                  span.role-badge= user.role
+                td
+                  a.button-link(href=`/users/${user.id}`) View Profile

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= article.title %></title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-inner">
+                <h1>Node Dashboard</h1>
+                <nav>
+                    <a href="/users">Users</a>
+                    <a href="/articles">Articles</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <a href="/articles" class="back-link"> ← Back to Articles </a>
+
+            <article class="article-detail">
+                <span class="category-tag"> <%= article.category %> </span>
+
+                <h1><%= article.title %></h1>
+
+                <p class="article-author">Written by <%= article.author %></p>
+
+                <div class="article-content">
+                    <p><%= article.content %></p>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
